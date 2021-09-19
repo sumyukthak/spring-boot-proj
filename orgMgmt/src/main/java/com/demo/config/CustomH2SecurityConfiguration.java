@@ -1,4 +1,4 @@
-package com.demo;
+package com.demo.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.h2.H2ConsoleProperties;
@@ -11,7 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @Configuration
 //before the default configuration
 @Order(SecurityProperties.BASIC_AUTH_ORDER - 11)
-class CustomH2ConsoleSecurityConfigurer extends WebSecurityConfigurerAdapter {
+class CustomH2SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
      @Autowired
      private H2ConsoleProperties console;

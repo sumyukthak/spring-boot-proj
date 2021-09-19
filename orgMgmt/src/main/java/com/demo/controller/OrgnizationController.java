@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+
 import com.demo.model.Organization;
 import com.demo.service.OrganizationService;
 
@@ -19,6 +21,7 @@ public class OrgnizationController {
 
     @Autowired
     private OrganizationService organizationService;
+    
 
     @GetMapping(value = "/organization/{id}", produces = MediaType.APPLICATION_XML_VALUE)
     public ResponseEntity<Organization> getOrganizationById(@PathVariable Integer id) {

@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.demo.model.Employee;
 import com.demo.service.EmployeeService;
@@ -29,6 +30,11 @@ public class EmployeeController {
 
     @Autowired
     private EmployeeService employeeService;
+    
+    @RequestMapping("/welcome")
+	public ModelAndView firstPage() {
+		return new ModelAndView("Welcome");
+	}
 
     @GetMapping(value="/employees", produces = MediaType.APPLICATION_XML_VALUE)
     public List<Employee> getAllEmployees() {

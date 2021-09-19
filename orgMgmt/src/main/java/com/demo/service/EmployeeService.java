@@ -68,6 +68,8 @@ public class EmployeeService {
 	public void delete(long id) {
 		Employee employee = employeeRepository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("Employee with the id - " + id + " not exist"));
+
+		
 		employeeRepository.delete(employee);
 		if (employee == null)
 			throw new ResourceNotFoundException("id-" + id);
