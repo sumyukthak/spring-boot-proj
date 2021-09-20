@@ -22,7 +22,8 @@ CREATE TABLE asset (
    asset_name VARCHAR(20) NOT NULL,    
    asset_type VARCHAR(20) NOT NULL,
    emp_id INT NULL,
-   foreign key (emp_id) references employee(emp_id),
+   foreign key (emp_id) references employee(emp_id) 
+   ON DELETE SET NULL,
    org_id INT,
    foreign key (org_id) references org(org_id)
 );
