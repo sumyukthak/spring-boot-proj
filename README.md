@@ -17,3 +17,5 @@ All the other settings can be left to default
 Running on STS :
 Once BUILD SUCCESS. Right click on a project folder and select Run As --> Spring Boot App
 
+Once project successfully started on the specified port --> try to hit http://localhost:8090/h2/ on browser and provide the respective schema, username and password for the DB and click on connect. 
+
